@@ -1,0 +1,12 @@
+apiVersion: v2
+appVersion: "1.0"
+description: dind pod for testing or debugging
+keywords:
+- dind
+maintainers:
+- email: iwashitah@jfrog.com
+  name: Hirofumi Iwashita
+name: dind
+sources:
+- https://github.com/iwashitah/dind
+version: 1.0
