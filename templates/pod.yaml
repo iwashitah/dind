@@ -14,8 +14,13 @@ spec:
       volumeMounts:
       - mountPath: /var/run/docker.sock
         name: docker-sock
+      - name: pvc-{{ .Release.Name }}-dind
+        mountPath: /TEST
   volumes:
   - name: docker-sock
     hostPath:
       path: /var/run/docker.sock
+  - name: pvc-{{ .Release.Name }}-dind
+    persistentVolumeClaim:
+      claimName: pvc-{{ .Release.Name }}-dind
   restartPolicy: Always
