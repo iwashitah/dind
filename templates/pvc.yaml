@@ -10,4 +10,4 @@ spec:
       storage: 10Gi
   storageClassName: local-path
   volumeMode: Filesystem
-  volumeName: pvc-{{ .Release.Name }}-dind
+  volumeName: pvc-{{ .Release.Name }}-{{ .Release.Namespace }}-dind

@@ -22,5 +22,5 @@ spec:
       path: /var/run/docker.sock
   - name: pvc-{{ .Release.Name }}-dind
     persistentVolumeClaim:
-      claimName: pvc-{{ .Release.Name }}-dind
+      claimName: pvc-{{ .Release.Name }}-{{ .Release.Namespace }}-dind
   restartPolicy: Always
