@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: {{ .Release.Name }}-dind
+  name: {{ .Release.Name }}-{{ .Release.Namespace }}-dind
   labels:
     app: dind
 spec:
